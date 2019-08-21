@@ -79,6 +79,10 @@ router.WebSocket("/ws", simpleframework.WebSocketConfig{
 	OnError: nil,
 })
 ```
++ 最后监听端口
+```
+router.Run(":80")
+```
 ### 备注
 + 暂不支持GET/POST以外的方法，路由树里未添加
 + 极简WebSocket只能每帧传小于125字节的文本
